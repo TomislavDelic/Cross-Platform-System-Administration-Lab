@@ -28,3 +28,5 @@ Configure and verify local user accounts, permissions, and basic security settin
 PASSED – Local user administration and security baseline verification completed.
 
 ## Screenshots
+
+![Local User Accounts](IT-001-01-Local-Users.png)
