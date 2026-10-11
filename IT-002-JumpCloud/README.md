@@ -32,5 +32,10 @@ Simulate employee onboarding and configure secure access using JumpCloud.
 PASSED – User onboarding, group management, and MFA verification completed successfully.
 
 ## Screenshots
-![JumpCloud User and MFA Verification](IT-002-01-User-MFA.png)
-![JumpCloud Group Membership](IT-002-02-Group-Membership.png)
+### User Account and MFA Verification
+
+<img src="IT-002-01-User-MFA.png" alt="JumpCloud user account and MFA verification" width="650">
+
+### User Group Membership
+
+<img src="IT-002-02-Group-Membership.png" alt="JumpCloud group membership" width="650">
