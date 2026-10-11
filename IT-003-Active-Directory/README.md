@@ -27,4 +27,14 @@ Simulate employee onboarding and configure secure access to a shared folder usin
 Successfully implemented and tested group-based access to a Windows Server SMB share using Active Directory authentication and NTFS permissions.
 
 ## Screenshots
-Screenshots of AD group membership and NTFS permissions will be added below.
+### 1. Active Directory Group Membership
+
+Verified that the user Marko Horvat is a member of the GG-Game-Developers security group.
+
+<img src="IT-003-01-AD-Group-Membership.png" width="400">
+
+### 2. NTFS Folder Permissions
+
+Configured Modify permissions for the GG-Game-Developers security group on the GameDev-Lab folder.
+
+<img src="IT-003-02-NTFS-Permissions.png" width="400">
