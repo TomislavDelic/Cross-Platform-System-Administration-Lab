@@ -33,3 +33,4 @@ PASSED – User onboarding, group management, and MFA verification completed suc
 
 ## Screenshots
 ![JumpCloud User and MFA Verification](IT-002-01-User-MFA.png)
+![JumpCloud Group Membership](IT-002-02-Group-Membership.png)
