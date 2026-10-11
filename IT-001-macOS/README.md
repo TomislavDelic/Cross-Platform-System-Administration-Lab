@@ -1,5 +1,4 @@
 # IT-001 – macOS Workstation Administration
-# IT-001 – macOS Workstation Administration
 
 ## Objective
 Configure and verify local user accounts, permissions, and basic security settings on a macOS workstation.
