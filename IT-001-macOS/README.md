@@ -28,6 +28,10 @@ Configure and verify local user accounts, permissions, and basic security settin
 PASSED – Local user administration and security baseline verification completed.
 
 ## Screenshots
+### Local User Accounts
 
-![Local User Accounts](IT-001-01-Local-Users.png)
-![User Permissions](IT-001-02-User-Permissions.png)
+<img src="IT-001-01-Local-Users.png" alt="macOS local user accounts" width="650">
+
+### User Permissions Verification
+
+<img src="IT-001-02-User-Permissions.png" alt="Terminal verification of standard user permissions" width="650">
