@@ -30,3 +30,4 @@ PASSED – Local user administration and security baseline verification complete
 ## Screenshots
 
 ![Local User Accounts](IT-001-01-Local-Users.png)
+![User Permissions](IT-001-02-User-Permissions.png)
