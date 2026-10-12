@@ -26,6 +26,20 @@ Simulate employee onboarding and configure secure access to a shared folder usin
 ## Result
 Successfully implemented and tested group-based access to a Windows Server SMB share using Active Directory authentication and NTFS permissions.
 
+## Issues Encountered
+
+### Domain User Logon Restriction
+
+**Issue:** A standard Active Directory user could not log on interactively to the Windows Server domain controller.
+
+**Cause:** Domain controllers restrict interactive logon for standard domain users by default.
+
+**Resolution:** Instead of modifying the domain controller's security policy, I configured an SMB share and tested access from a separate Windows 11 virtual machine using domain credentials.
+
+**Verification:** Successfully authenticated as LAB\mhorvat, accessed the shared folder, and created a test file to confirm write permissions.
+
+**Lesson Learned:** Domain user access to shared resources can be tested remotely without granting interactive logon permissions on a domain controller.
+
 ## Screenshots
 ### 1. Active Directory Group Membership
 
