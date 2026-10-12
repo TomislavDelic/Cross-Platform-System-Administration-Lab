@@ -80,11 +80,15 @@ The original connector failed to complete SAML authentication. Creating a new co
 
 SAML troubleshooting requires verifying authentication events, IdP and SP configuration, redirect behavior, and application assignments rather than assuming that successful user authentication guarantees successful SSO.
 
+### SAML SSO – Successful Authentication
+
+The IAMShowcase Service Provider confirmed successful SAML federation using the new JumpCloud EU test connector.
+
+<img src="IT-002-03-SAML-SSO-Success.png" width="400">
+
 ## Screenshots
 ### User Account and MFA Verification
 
-<img src="IT-002-01-User-MFA.png" alt="JumpCloud user account and MFA verification" width="650">
+<img src="IT-002-01-User-MFA.png" alt="JumpCloud user account and MFA verification" width="450">
 
-### User Group Membership
 
-<img src="IT-002-02-Group-Membership.png" alt="JumpCloud group membership" width="650">
