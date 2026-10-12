@@ -27,11 +27,46 @@ Configure and verify local user accounts, permissions, and basic security settin
 ## Result
 PASSED – Local user administration and security baseline verification completed.
 
+## Terminal Commands and Verification
+
+The following commands were used to verify the local user account and its group membership in macOS.
+
+### User Identity
+
+```bash
+id -un labuser
+id -u labuser
+id -gn labuser
+id -Gn labuser
+```
+
+These commands display the username, user ID (UID), primary group, and group memberships.
+
+**Verified results:**
+- Username: labuser
+- UID: 502
+- Primary group: staff
+- The user belongs to standard local system groups.
+
+### Administrator Group Membership
+
+```bash
+dseditgroup -o checkmember -m labuser admin
+```
+
+This command checks whether labuser belongs to the local admin group.
+
+**Verified result:**
+
+```text
+no labuser is NOT a member of admin
+```
+
+### Result
+
+Confirmed that labuser is a standard macOS account without local administrator group membership. User identity and group membership were verified using Terminal commands.
+
 ## Screenshots
 ### Local User Accounts
 
 <img src="IT-001-01-Local-Users.png" alt="macOS local user accounts" width="650">
-
-### User Permissions Verification
-
-<img src="IT-001-02-User-Permissions.png" alt="Terminal verification of standard user permissions" width="650">
