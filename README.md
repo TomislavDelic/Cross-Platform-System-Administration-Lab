@@ -16,11 +16,11 @@ Each lab documents the environment, tasks performed, verification results, and t
 
 | Category | Technologies |
 |---|---|
-| Operating Systems | Windows 11, Windows Server 2022, macOS, Ubuntu Server |
+| Operating Systems | Windows 11, Windows Server 2022, macOS |
 | Identity & Access Management | Active Directory, Microsoft Entra ID, JumpCloud, Google Workspace |
 | Cloud & Productivity | Microsoft 365, Microsoft Azure, Google Workspace |
 | Security | MFA, NTFS and SMB permissions, authentication policies |
-| Networking | TCP/IP, SMB, SSH, basic network troubleshooting |
+| Networking | TCP/IP, SMB, basic network troubleshooting |
 | Virtualization | Microsoft Hyper-V |
 | Documentation | GitHub, Markdown |
 
@@ -32,7 +32,7 @@ Each lab documents the environment, tasks performed, verification results, and t
 | [IT-002 – JumpCloud IAM](IT-002-JumpCloud/) | User provisioning, security groups, MFA authentication and application assignment | Completed |
 | [IT-003 – Active Directory](IT-003-Active-Directory/) | AD users, security groups, NTFS and SMB permissions, access verification | Completed |
 | [IT-004 – Google Workspace](IT-004-Google-Workspace/) | User administration, organizational units, MFA enforcement and group management | Completed |
-| IT-005 – Linux Administration | Users, groups, SSH, file permissions, services and firewall administration | In Progress |
+| IT-005 – Linux Administration | Users, groups, SSH, file permissions, services and firewall administration | Planned |
 
 ## Practical Lab Highlights
 
