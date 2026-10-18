@@ -33,7 +33,8 @@ Each lab documents the environment, tasks performed, verification results, and t
 | [IT-003 – Active Directory](IT-003-Active-Directory/) | AD users, security groups, NTFS and SMB permissions, access verification | Completed |
 | [IT-004 – Google Workspace](IT-004-Google-Workspace/) | User administration, organizational units, MFA enforcement and group management | Completed |
 | IT-005 – Linux Administration | Users, groups, SSH, file permissions, services and firewall administration | Planned |
-| [IT-006 – JumpCloud Device Management](IT-006-JumpCloud-Device-Management/) | Device enrollment, endpoint management and security policies | Completed |
+| [IT-006 – JumpCloud Device Management](IT-006-JumpCloud-Device-Management/) | Windows device management (completed); macOS device management (planned) | In Progress |
+
 
 ## Practical Lab Highlights
 
