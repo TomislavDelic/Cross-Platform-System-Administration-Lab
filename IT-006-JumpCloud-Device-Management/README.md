@@ -228,6 +228,46 @@ This confirmed that the test user no longer had usable local administrator privi
 
 The privileges were manually revoked before the one-hour period expired. Automatic expiration was not tested.
 
+
+---
+
+### 9. macOS VM Preparation
+
+Prepared a dedicated macOS virtual machine using UTM on an Apple Silicon MacBook Pro.
+
+The purpose of this environment is to extend the existing Windows JumpCloud device management lab to macOS while keeping testing isolated from the host operating system.
+
+**Environment:**
+
+| Component | Configuration |
+|---|---|
+| Hypervisor | UTM (Apple Virtualization) |
+| Operating System | macOS Tahoe 26.1 |
+| Architecture | Apple Silicon (ARM64) |
+| Virtual CPU | Apple M5 (Virtual) |
+| Memory | 4 GB |
+| Local Administrator | labadmin |
+| Guest Integration | UTM Guest Tools |
+
+**Implementation:**
+
+1. Created a macOS virtual machine in UTM.
+2. Downloaded the macOS Tahoe 26.1 IPSW installation image.
+3. Installed macOS using Apple Virtualization.
+4. Created a dedicated local administrator account.
+5. Installed UTM Guest Tools.
+6. Enabled clipboard sharing between the host and guest operating systems.
+
+**Verification:**
+
+- macOS Tahoe 26.1 booted successfully.
+- The local administrator account was accessible.
+- UTM Guest Tools installation completed successfully.
+- Clipboard sharing between host and guest was tested successfully.
+
+The macOS virtual machine is ready for JumpCloud device management testing.
+
+
 ---
 
 ## Verification and Results
