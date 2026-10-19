@@ -8,7 +8,7 @@ The project covers MDM enrollment, Windows configuration policies, local user pr
 
 A significant part of the lab involved troubleshooting residual Microsoft Intune enrollment data that prevented successful JumpCloud MDM enrollment.
 
-All testing was performed in a Hyper-V virtual machine.
+Windows device management was successfully implemented and verified in a Hyper-V virtual machine. Additional macOS device management testing was performed in an isolated UTM virtual machine.
 
 ## Lab Environment
 
@@ -233,9 +233,9 @@ The privileges were manually revoked before the one-hour period expired. Automat
 
 ### 9. macOS VM Preparation
 
-Prepared a dedicated macOS virtual machine using UTM on an Apple Silicon MacBook Pro.
+Prepared a dedicated macOS environment on Apple Silicon for cross-platform system administration testing.
 
-The purpose of this environment is to extend the existing Windows JumpCloud device management lab to macOS while keeping testing isolated from the host operating system.
+This environment was used to explore macOS administration and JumpCloud device management workflows in an isolated lab setup..
 
 **Environment:**
 
@@ -265,7 +265,7 @@ The purpose of this environment is to extend the existing Windows JumpCloud devi
 - UTM Guest Tools installation completed successfully.
 - Clipboard sharing between host and guest was tested successfully.
 
-The macOS virtual machine is ready for JumpCloud device management testing.
+The macOS environment was configured to support practical exploration of JumpCloud device management and Apple MDM workflows.
 
 
 ---
