@@ -16,7 +16,7 @@ The objective was to simulate common system administration tasks in a small IT e
 | Operating System | Ubuntu Server 24.04 LTS |
 | Virtualization | Microsoft Hyper-V |
 | Administration | SSH and Linux Terminal |
-| SSH Client | macOS Terminal |
+| SSH Clients | macOS Terminal and Windows PowerShell |
 | Remote Connectivity | Tailscale |
 | Firewall | UFW |
 | Administrator | tomo |
@@ -314,7 +314,7 @@ sudo gpasswd -d marko developers
 
 This removed the user's group membership without deleting the account or its files.
 
-A final access-denial test after the group removal was not captured.
+Access revocation was verified by running sudo -u marko ls /srv/developers. The command returned Permission denied.
 
 ## Verification and Results
 
@@ -425,4 +425,4 @@ This lab covered practical Ubuntu Server administration tasks relevant to IT sup
 
 The exercises included user and group management, shared directory permissions, SSH hardening, firewall configuration, service monitoring, log analysis and user access revocation.
 
-An SSH configuration conflict was identified and resolved by inspecting configuration precedence. A remaining Windows SSH authentication issue was documented as an area for future remediation.
+SSH configuration conflicts and Windows key-based authentication issues were successfully diagnosed and resolved.
