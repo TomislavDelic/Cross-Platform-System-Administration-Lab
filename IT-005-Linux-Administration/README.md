@@ -333,8 +333,8 @@ A final access-denial test after the group removal was not captured.
 | SSH service and log verification | Passed |
 | CPU, memory and disk monitoring | Passed |
 | Remove user from developers group | Passed |
-| Verify access denial after offboarding | Not tested |
-| Windows PowerShell SSH access after hardening | Failed |
+| Verify access denial after offboarding | Passed |
+| Windows PowerShell SSH access after hardening | Passed |
 
 ## Issues Encountered
 
@@ -358,31 +358,56 @@ Changed the setting in the cloud-init SSH configuration file to `no`, validated 
 
 Subsequent tests confirmed that SSH key authentication worked and password-only authentication was blocked.
 
+
 ### Issue 2 – Windows PowerShell SSH Access Failed
 
 **Problem:**
 
-After disabling SSH password authentication, a connection attempt from Windows PowerShell returned:
+After disabling SSH password authentication, remote access from Windows PowerShell failed with the following error:
 
 ```text
 Permission denied (publickey).
 ```
 
-**Cause:**
+**Root Cause:**
 
-The macOS SSH key had been successfully configured and tested, but the Windows SSH public key had not been verified on the Ubuntu Server before password authentication was disabled.
+SSH key-based authentication had been configured and tested successfully from macOS, but the Windows SSH public key had not been added to the Ubuntu Server's `authorized_keys` file.
 
-**Status: Unresolved**
+As a result, Windows could no longer authenticate after password-based authentication was disabled.
 
-The Windows public key was identified locally, but successful key-based authentication from Windows was not confirmed.
+**Resolution:**
 
-The Ubuntu Server remained accessible from macOS over SSH using the configured key.
+1. Temporarily restored SSH password authentication through the Hyper-V console.
+2. Reloaded the SSH service to restore remote access from Windows PowerShell.
+3. Added the existing Windows Ed25519 public key to the Ubuntu user's `~/.ssh/authorized_keys` file.
+4. Successfully tested SSH key-based authentication from Windows.
+5. Disabled password authentication again.
+6. Validated and reloaded the SSH configuration.
+7. Confirmed successful SSH key-based login from Windows PowerShell.
+
+**Verification:**
+
+The Windows PowerShell SSH connection succeeded using public-key authentication with password authentication disabled.
+
+The SSH server configuration was verified with:
+
+```bash
+sudo sshd -T
+```
+
+Confirmed security settings:
+
+```text
+permitrootlogin no
+pubkeyauthentication yes
+passwordauthentication no
+```
 
 **Lesson Learned:**
 
-Before disabling SSH password authentication, verify key-based access from every client that requires administration access.
+Before disabling SSH password authentication, verify key-based access from every administrative client.
 
-Keep an existing authenticated session available during SSH configuration changes and test a new connection before closing it.
+Always maintain an existing authenticated session or console recovery access until the updated SSH configuration has been tested successfully.
 
 ## Security Considerations
 
